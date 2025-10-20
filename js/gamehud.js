@@ -19,11 +19,11 @@ export class StartScreen {
 
         const titleText = document.createElement("div");
         Object.assign(titleText.style, {
-            fontSize: "15em",
+            fontSize: "8vw",
             fontWeight: "bold",
             color: "#FFD700",
-            textShadow: "8px 8px 16px rgba(0,0,0,0.9)",
-            marginBottom: "60px"
+            textShadow: "0.4vw 0.4vw 0.8vw rgba(0,0,0,0.9)",
+            marginBottom: "3vh"
         });
         titleText.textContent = "SUBWAY SURFERS";
         this.screen.appendChild(titleText);
@@ -33,9 +33,9 @@ export class StartScreen {
             display: "flex",
             flexDirection: "column",
             alignItems: "center",
-            gap: "25px",
-            marginBottom: "80px",
-            padding: "60px"
+            gap: "1.5vh",
+            marginBottom: "4vh",
+            padding: "3vh"
         });
 
         const color = "#00D9FF";
@@ -45,48 +45,48 @@ export class StartScreen {
             Object.assign(keyCard.style, {
                 background: "linear-gradient(135deg, rgba(0,217,255,0.15), rgba(0,217,255,0.05))",
                 backdropFilter: "blur(10px)",
-                border: `3px solid ${color}`,
-                borderRadius: "25px",
-                padding: "30px 40px",
+                border: `0.15vw solid ${color}`,
+                borderRadius: "1.2vw",
+                padding: "1.5vh 2vw",
                 display: "flex",
                 alignItems: "center",
-                gap: "30px",
-                boxShadow: `0 10px 40px ${color}40, inset 0 0 20px rgba(0,217,255,0.1)`,
-                minWidth: "450px"
+                gap: "1.5vw",
+                boxShadow: `0 0.5vh 2vh ${color}40, inset 0 0 1vh rgba(0,217,255,0.1)`,
+                minWidth: "22vw"
             });
 
             const keyBox = document.createElement("div");
             Object.assign(keyBox.style, {
-                fontSize: "5em",
+                fontSize: "2.5vw",
                 fontWeight: "bold",
                 color: color,
                 backgroundColor: "rgba(0,0,0,0.6)",
-                padding: "15px 30px",
-                borderRadius: "15px",
-                border: `2px solid ${color}`,
-                boxShadow: `0 0 25px ${color}80`,
-                minWidth: "100px",
+                padding: "0.8vh 1.5vw",
+                borderRadius: "0.8vw",
+                border: `0.1vw solid ${color}`,
+                boxShadow: `0 0 1.2vw ${color}80`,
+                minWidth: "5vw",
                 textAlign: "center"
             });
             keyBox.textContent = key;
 
             const iconBox = document.createElement("div");
             Object.assign(iconBox.style, {
-                fontSize: "4em",
+                fontSize: "2vw",
                 color: color,
-                textShadow: `0 0 20px ${color}`,
-                minWidth: "60px",
+                textShadow: `0 0 1vw ${color}`,
+                minWidth: "3vw",
                 textAlign: "center"
             });
             iconBox.textContent = icon;
 
             const actionText = document.createElement("div");
             Object.assign(actionText.style, {
-                fontSize: "3.5em",
+                fontSize: "1.8vw",
                 fontWeight: "bold",
                 color: "white",
-                textShadow: "3px 3px 10px rgba(0,0,0,0.8)",
-                letterSpacing: "2px",
+                textShadow: "0.15vw 0.15vw 0.5vw rgba(0,0,0,0.8)",
+                letterSpacing: "0.1vw",
                 flex: "1"
             });
             actionText.textContent = action;
@@ -108,7 +108,7 @@ export class StartScreen {
         const bottomRow = document.createElement("div");
         Object.assign(bottomRow.style, {
             display: "flex",
-            gap: "25px"
+            gap: "1.5vw"
         });
         bottomRow.appendChild(createKey("A", "←", "IZQUIERDA"));
         bottomRow.appendChild(createKey("S", "↓", "RODAR"));
@@ -119,21 +119,19 @@ export class StartScreen {
 
         const startInstruction = document.createElement("div");
         Object.assign(startInstruction.style, {
-            fontSize: "7em",
+            fontSize: "3.5vw",
             fontWeight: "bold",
             color: "white",
-            textShadow: "5px 5px 15px rgba(0,0,0,0.9), 0 0 30px #FFD700",
+            textShadow: "0.25vw 0.25vw 0.75vw rgba(0,0,0,0.9), 0 0 1.5vw #FFD700",
             animation: "pulse 2s infinite",
-            marginTop: "20px",
-            padding: "30px 60px",
+            marginTop: "1vh",
+            padding: "1.5vh 3vw",
             background: "linear-gradient(135deg, rgba(255,215,0,0.2), rgba(255,215,0,0.1))",
-            borderRadius: "25px",
-            border: "3px solid #FFD700"
+            borderRadius: "1.2vw",
+            border: "0.15vw solid #FFD700"
         });
         startInstruction.textContent = "PRESIONA ESPACIO PARA JUGAR";
         this.screen.appendChild(startInstruction);
-
-        
 
         if (!document.getElementById('pulse-animation')) {
             const style = document.createElement('style');
@@ -188,12 +186,12 @@ export class GameScreen {
         this.distanceEl = document.createElement("div");
         Object.assign(this.distanceEl.style, {
             position: "absolute",
-            top: "50px",
+            top: "3vh",
             left: "50%",
             transform: "translateX(-50%)",
-            fontSize: "8em",
+            fontSize: "4vw",
             fontWeight: "bold",
-            textShadow: "5px 5px 10px rgba(0,0,0,0.9)"
+            textShadow: "0.25vw 0.25vw 0.5vw rgba(0,0,0,0.9)"
         });
         this.distanceEl.textContent = "0 m";
         this.screen.appendChild(this.distanceEl);
@@ -201,11 +199,11 @@ export class GameScreen {
         this.fpsEl = document.createElement("div");
         Object.assign(this.fpsEl.style, {
             position: "absolute",
-            top: "50px",
-            right: "50px",
-            fontSize: "6em",
+            top: "3vh",
+            right: "3vw",
+            fontSize: "3vw",
             fontWeight: "bold",
-            textShadow: "5px 5px 10px rgba(0,0,0,0.9)"
+            textShadow: "0.25vw 0.25vw 0.5vw rgba(0,0,0,0.9)"
         });
         this.fpsEl.textContent = "FPS: 0";
         this.screen.appendChild(this.fpsEl);
@@ -274,37 +272,37 @@ export class GameOverScreen {
 
         const gameOverText = document.createElement("div");
         Object.assign(gameOverText.style, {
-            fontSize: "18em",
+            fontSize: "9vw",
             color: "red",
             fontWeight: "bold",
-            textShadow: "8px 8px 16px rgba(0,0,0,0.9)",
-            marginBottom: "60px"
+            textShadow: "0.4vw 0.4vw 0.8vw rgba(0,0,0,0.9)",
+            marginBottom: "3vh"
         });
         gameOverText.textContent = "GAME OVER";
         this.screen.appendChild(gameOverText);
 
         this.finalDistanceEl = document.createElement("div");
         Object.assign(this.finalDistanceEl.style, {
-            fontSize: "10em",
+            fontSize: "5vw",
             color: "white",
             fontWeight: "bold",
-            textShadow: "6px 6px 12px rgba(0,0,0,0.9)",
-            marginBottom: "60px"
+            textShadow: "0.3vw 0.3vw 0.6vw rgba(0,0,0,0.9)",
+            marginBottom: "3vh"
         });
         this.screen.appendChild(this.finalDistanceEl);
 
         this.restartBtn = document.createElement("button");
         this.restartBtn.textContent = "Reiniciar";
         Object.assign(this.restartBtn.style, {
-            fontSize: "7em",
-            padding: "30px 80px",
+            fontSize: "3.5vw",
+            padding: "1.5vh 4vw",
             cursor: "pointer",
             backgroundColor: "#4CAF50",
             color: "white",
             border: "none",
-            borderRadius: "25px",
+            borderRadius: "1.2vw",
             fontWeight: "bold",
-            boxShadow: "0 8px 16px rgba(0,0,0,0.5)",
+            boxShadow: "0 0.4vh 0.8vh rgba(0,0,0,0.5)",
             pointerEvents: "auto"
         });
         this.restartBtn.addEventListener("click", () => {
