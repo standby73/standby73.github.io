@@ -1,0 +1,8 @@
+Model Information:
+* title:	Locomotive - GE AC4400CW
+* source:	https://sketchfab.com/3d-models/locomotive-ge-ac4400cw-566dfed7fa9941b69aa2428d75915f6f
+* author:	Korolv (https://sketchfab.com/Korolv)
+
+Model License:
+* license type:	SKETCHFAB Standard (https://sketchfab.com/licenses)
+* requirements:	Under basic restrictions, use worldwide, on all types of media, commercially or not, and in all types of derivative works

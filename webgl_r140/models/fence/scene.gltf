@@ -1,0 +1,408 @@
+{
+  "accessors": [
+    {
+      "bufferView": 2,
+      "componentType": 5126,
+      "count": 448,
+      "max": [
+        119.21426391601563,
+        8.685155868530273,
+        32.06636428833008
+      ],
+      "min": [
+        -121.47589874267578,
+        -8.554100036621094,
+        -257.7320251464844
+      ],
+      "type": "VEC3"
+    },
+    {
+      "bufferView": 2,
+      "byteOffset": 5376,
+      "componentType": 5126,
+      "count": 448,
+      "max": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "min": [
+        -1.0,
+        -1.0,
+        -1.0
+      ],
+      "type": "VEC3"
+    },
+    {
+      "bufferView": 1,
+      "componentType": 5126,
+      "count": 448,
+      "max": [
+        0.8969131708145142,
+        0.7536193132400513
+      ],
+      "min": [
+        0.10308682918548584,
+        0.3076672852039337
+      ],
+      "type": "VEC2"
+    },
+    {
+      "bufferView": 0,
+      "componentType": 5125,
+      "count": 708,
+      "type": "SCALAR"
+    },
+    {
+      "bufferView": 2,
+      "byteOffset": 10752,
+      "componentType": 5126,
+      "count": 336,
+      "max": [
+        154.81927490234375,
+        3.5158474445343018,
+        33.84449005126953
+      ],
+      "min": [
+        -19.916597366333008,
+        -3.527998685836792,
+        -64.92356872558594
+      ],
+      "type": "VEC3"
+    },
+    {
+      "bufferView": 2,
+      "byteOffset": 14784,
+      "componentType": 5126,
+      "count": 336,
+      "max": [
+        1.0,
+        0.9189289212226868,
+        1.0
+      ],
+      "min": [
+        -1.0,
+        -0.8957715034484863,
+        -1.0
+      ],
+      "type": "VEC3"
+    },
+    {
+      "bufferView": 1,
+      "byteOffset": 3584,
+      "componentType": 5126,
+      "count": 336,
+      "max": [
+        0.9921949505805969,
+        0.7867584824562073
+      ],
+      "min": [
+        0.007805049419403076,
+        0.21324148774147034
+      ],
+      "type": "VEC2"
+    },
+    {
+      "bufferView": 0,
+      "byteOffset": 2832,
+      "componentType": 5125,
+      "count": 924,
+      "type": "SCALAR"
+    }
+  ],
+  "asset": {
+    "extras": {
+      "author": "Graphend (https://sketchfab.com/Graphend)",
+      "license": "SKETCHFAB Standard (https://sketchfab.com/licenses)",
+      "source": "https://sketchfab.com/3d-models/urban-road-center-barrier-low-poly-game-ready-2083353124524dc2b37276f1b1a6c4c5",
+      "title": "Urban Road Center Barrier | Low Poly Game Ready"
+    },
+    "generator": "Sketchfab-16.67.0",
+    "version": "2.0"
+  },
+  "bufferViews": [
+    {
+      "buffer": 0,
+      "byteLength": 6528,
+      "name": "floatBufferViews",
+      "target": 34963
+    },
+    {
+      "buffer": 0,
+      "byteLength": 6272,
+      "byteOffset": 6528,
+      "byteStride": 8,
+      "name": "floatBufferViews",
+      "target": 34962
+    },
+    {
+      "buffer": 0,
+      "byteLength": 18816,
+      "byteOffset": 12800,
+      "byteStride": 12,
+      "name": "floatBufferViews",
+      "target": 34962
+    }
+  ],
+  "buffers": [
+    {
+      "byteLength": 31616,
+      "uri": "scene.bin"
+    }
+  ],
+  "extensionsUsed": [
+    "KHR_materials_specular"
+  ],
+  "materials": [
+    {
+      "doubleSided": true,
+      "extensions": {
+        "KHR_materials_specular": {
+          "specularColorFactor": [
+            1.0,
+            1.0,
+            1.0
+          ],
+          "specularFactor": 0.7177164730406796
+        }
+      },
+      "name": "Material_25",
+      "pbrMetallicRoughness": {
+        "baseColorFactor": [
+          1.0,
+          0.7409556523337898,
+          0.0,
+          1.0
+        ],
+        "metallicFactor": 0.8822884031646572,
+        "roughnessFactor": 0.38247735612146627
+      }
+    },
+    {
+      "doubleSided": true,
+      "extensions": {
+        "KHR_materials_specular": {
+          "specularColorFactor": [
+            1.0,
+            1.0,
+            1.0
+          ],
+          "specularFactor": 0.6262876229718033
+        }
+      },
+      "name": "Material_26",
+      "pbrMetallicRoughness": {
+        "baseColorFactor": [
+          0.02481857444547244,
+          0.34715108505344794,
+          0.0,
+          1.0
+        ],
+        "metallicFactor": 0.7177164730406796,
+        "roughnessFactor": 0.37638209945020784
+      }
+    }
+  ],
+  "meshes": [
+    {
+      "name": "Cylinder003_Material #25_0",
+      "primitives": [
+        {
+          "attributes": {
+            "NORMAL": 1,
+            "POSITION": 0,
+            "TEXCOORD_0": 2
+          },
+          "indices": 3,
+          "material": 0,
+          "mode": 4
+        }
+      ]
+    },
+    {
+      "name": "Cylinder001_Material #26_0",
+      "primitives": [
+        {
+          "attributes": {
+            "NORMAL": 5,
+            "POSITION": 4,
+            "TEXCOORD_0": 6
+          },
+          "indices": 7,
+          "material": 1,
+          "mode": 4
+        }
+      ]
+    }
+  ],
+  "nodes": [
+    {
+      "children": [
+        1
+      ],
+      "matrix": [
+        1.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        2.220446049250313e-16,
+        -1.0,
+        0.0,
+        0.0,
+        1.0,
+        2.220446049250313e-16,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        1.0
+      ],
+      "name": "Sketchfab_model"
+    },
+    {
+      "children": [
+        2
+      ],
+      "matrix": [
+        0.02539999969303608,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.02539999969303608,
+        0.0,
+        0.0,
+        -0.02539999969303608,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        1.0
+      ],
+      "name": "45c9e001b00e4a4696429857d9a3f079.fbx"
+    },
+    {
+      "children": [
+        3
+      ],
+      "name": "RootNode"
+    },
+    {
+      "children": [
+        4,
+        6
+      ],
+      "matrix": [
+        1.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        2.220446049250313e-16,
+        -1.0,
+        0.0,
+        0.0,
+        1.0,
+        2.220446049250313e-16,
+        0.0,
+        -2.2676315307617188,
+        49.390316009521484,
+        0.006078004837036133,
+        1.0
+      ],
+      "name": "Group001"
+    },
+    {
+      "children": [
+        5
+      ],
+      "matrix": [
+        5.1984731114324185e-08,
+        0.0,
+        0.31907999515533025,
+        0.0,
+        0.0,
+        0.13958600163459778,
+        0.0,
+        0.0,
+        -0.4740259945392546,
+        0.0,
+        7.722863934270561e-08,
+        0.0,
+        -51.846763610839844,
+        -0.0029579075053334236,
+        5.6380462646484375,
+        1.0
+      ],
+      "name": "Cylinder003"
+    },
+    {
+      "mesh": 0,
+      "name": "Cylinder003_Material #25_0"
+    },
+    {
+      "children": [
+        7
+      ],
+      "matrix": [
+        1.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        1.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        1.0,
+        0.0,
+        2.2676315307617188,
+        0.0060744015499949455,
+        5.6380462646484375,
+        1.0
+      ],
+      "name": "Cylinder001"
+    },
+    {
+      "children": [
+        8
+      ],
+      "matrix": [
+        1.0,
+        0.0,
+        -0.0,
+        0.0,
+        0.0,
+        1.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        1.0,
+        0.0,
+        -69.7189712524414,
+        1.1920928955078125e-06,
+        9.901494979858398,
+        1.0
+      ],
+      "name": "Object_7"
+    },
+    {
+      "mesh": 1,
+      "name": "Cylinder001_Material #26_0"
+    }
+  ],
+  "scene": 0,
+  "scenes": [
+    {
+      "name": "Sketchfab_Scene",
+      "nodes": [
+        0
+      ]
+    }
+  ]
+}
