@@ -231,11 +231,14 @@ function init()
 function onCollision(event){ 
     let otherBody = event.body;
     if (otherBody.obstacle && playGame) {
-        hud.showGameOver(() => {
-            restart = true;
-            playGame = false;
-            init();
-        });
+        changeAnimation(4);
+        setTimeout(() => {
+            hud.showGameOver(() => {
+                restart = true;
+                playGame = false;
+                init();
+            });
+        }, 2000);
         playGame = false;
         restart = true;
     }
@@ -254,7 +257,8 @@ function loadModelAndAnimations() {
         const animations = ["models/subway/Running.fbx", 
                             'models/subway/Jumping.fbx', 
                             'models/subway/Stand To Roll.fbx',
-                            "models/subway/Wave Hip Hop Dance.fbx"];
+                            "models/subway/Wave Hip Hop Dance.fbx",
+                            "models/subway/Sweep Fall.fbx"];
         animations.forEach(function (animFile, index) {
             loader.load(animFile, function (animData) {
                 const name = animFile.split('/').pop().split('.').slice(0, -1).join('.');
@@ -297,6 +301,9 @@ function loadModelAndAnimations() {
                     action.timeScale = 1.6;
                 } else if (name === 'Jumping') {
                     action.timeScale = 0.9;
+                } else if (name === 'Sweep Fall') {  
+                    action.setLoop(THREE.LoopOnce);  
+                    action.clampWhenFinished = true; 
                 }
 
                 actions[name] = action;            
@@ -363,6 +370,11 @@ function update()
 
     if(player.mesh.fbx && currentAnimationIndex===1){
         player.mesh.fbx.position.y += player.height/2;
+    }
+    if(player.mesh.fbx && currentAnimationIndex===4 && player.isGround()){
+        player.mesh.fbx.position.y += player.height/10 ;
+        player.mesh.body.velocity.set(0, player.mesh.body.velocity.y, 0);
+        player.mesh.body.angularVelocity.set(0, player.mesh.body.angularVelocity.y, 0);
     }
 
     if (!camaraFollow) {
