@@ -231,6 +231,10 @@ function init()
 function onCollision(event){ 
     let otherBody = event.body;
     if (otherBody.obstacle && playGame) {
+        if (state === 'roll') {
+            state==='run';
+            player.standUp();
+        }
         if (player.mesh.fbx) {
             player.mesh.fbx.traverse(child => {
                 if (child.isMesh) {
