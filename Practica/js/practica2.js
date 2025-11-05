@@ -192,121 +192,45 @@ function iniciarAnimacion() {
     separacion_pinza: gui_controls.separacion_pinza
   };
 
-  // 1. Giro completo de base + abrir pinza al máximo
   const tween1 = new TWEEN.Tween(inicio)
     .to({
-      giro_base: limite(180, -180, 180),
-      separacion_pinza: limite(15, 0, 15),
-      giro_brazo: limite(-45, -45, 45)
+      giro_base: limite(120, -180, 180),
+      giro_brazo: limite(-30, -45, 45),
+      giro_antebrazo_y: limite(60, -180, 180),
+      separacion_pinza: limite(15, 0, 15)
     }, 2000)
     .easing(TWEEN.Easing.Quadratic.InOut)
-    .onUpdate(() => {
-      actualizarRobot(inicio);
-    });
+    .onUpdate(() => actualizarRobot(inicio));
 
-  // 2. Brazo al máximo + antebrazo Y completo
   const tween2 = new TWEEN.Tween(inicio)
     .to({
       giro_brazo: limite(45, -45, 45),
-      giro_antebrazo_y: limite(180, -180, 180),
-      giro_antebrazo_z: limite(-90, -90, 90)
-    }, 2000)
+      giro_antebrazo_z: limite(-80, -90, 90),
+      giro_pinza: limite(180, -40, 220)
+    }, 3000)
     .easing(TWEEN.Easing.Cubic.InOut)
-    .onUpdate(() => {
-      actualizarRobot(inicio);
-    });
+    .onUpdate(() => actualizarRobot(inicio));
 
-  // 3. Rotar antebrazo Z al máximo + girar pinza
   const tween3 = new TWEEN.Tween(inicio)
     .to({
+      giro_base: limite(-120, -180, 180),
+      giro_antebrazo_y: limite(-120, -180, 180),
       giro_antebrazo_z: limite(90, -90, 90),
-      giro_pinza: limite(220, -40, 220)
-    }, 1500)
-    .easing(TWEEN.Easing.Sinusoidal.InOut)
-    .onUpdate(() => {
-      actualizarRobot(inicio);
-    });
+      separacion_pinza: limite(5, 0, 15)
+    }, 3000)
+    .easing(TWEEN.Easing.Back.InOut)
+    .onUpdate(() => actualizarRobot(inicio));
 
-  // 4. Cerrar pinza completamente
   const tween4 = new TWEEN.Tween(inicio)
     .to({
+      giro_brazo: limite(-45, -45, 45),
+      giro_pinza: limite(-20, -40, 220),
       separacion_pinza: limite(0, 0, 15)
-    }, 800)
+    }, 3000)
     .easing(TWEEN.Easing.Elastic.Out)
-    .onUpdate(() => {
-      actualizarRobot(inicio);
-    });
+    .onUpdate(() => actualizarRobot(inicio));
 
-  // 5. Explorar rango completo de antebrazo Y negativo
   const tween5 = new TWEEN.Tween(inicio)
-    .to({
-      giro_antebrazo_y: limite(-180, -180, 180),
-      giro_base: limite(-180, -180, 180)
-    }, 2500)
-    .easing(TWEEN.Easing.Quadratic.InOut)
-    .onUpdate(() => {
-      actualizarRobot(inicio);
-    });
-
-  // 6. Movimiento complejo combinado
-  const tween6 = new TWEEN.Tween(inicio)
-    .to({
-      giro_brazo: limite(-30, -45, 45),
-      giro_antebrazo_z: limite(-60, -90, 90),
-      giro_pinza: limite(-40, -40, 220),
-      separacion_pinza: limite(10, 0, 15)
-    }, 1800)
-    .easing(TWEEN.Easing.Back.InOut)
-    .onUpdate(() => {
-      actualizarRobot(inicio);
-    });
-
-  // 7. Giro extremo de base + antebrazo Y
-  const tween7 = new TWEEN.Tween(inicio)
-    .to({
-      giro_base: limite(90, -180, 180),
-      giro_antebrazo_y: limite(90, -180, 180),
-      giro_brazo: limite(30, -45, 45)
-    }, 2000)
-    .easing(TWEEN.Easing.Cubic.InOut)
-    .onUpdate(() => {
-      actualizarRobot(inicio);
-    });
-
-  // 8 y 9. Abrir y cerrar pinza rápido
-  const tween8 = new TWEEN.Tween(inicio)
-    .to({
-      separacion_pinza: limite(15, 0, 15)
-    }, 400)
-    .easing(TWEEN.Easing.Bounce.Out)
-    .onUpdate(() => {
-      actualizarRobot(inicio);
-    });
-
-  const tween9 = new TWEEN.Tween(inicio)
-    .to({
-      separacion_pinza: limite(0, 0, 15)
-    }, 400)
-    .easing(TWEEN.Easing.Bounce.Out)
-    .onUpdate(() => {
-      actualizarRobot(inicio);
-    });
-
-  // 10. Posición extrema final antes de volver
-  const tween10 = new TWEEN.Tween(inicio)
-    .to({
-      giro_base: limite(-90, -180, 180),
-      giro_brazo: limite(20, -45, 45),
-      giro_antebrazo_y: limite(-90, -180, 180),
-      giro_antebrazo_z: limite(45, -90, 90),
-      giro_pinza: limite(100, -40, 220)
-    }, 2000)
-    .easing(TWEEN.Easing.Sinusoidal.InOut)
-    .onUpdate(() => {
-      actualizarRobot(inicio);
-    });
-
-  const tween11 = new TWEEN.Tween(inicio)
     .to({
       giro_base: posicionInicial.giro_base,
       giro_brazo: posicionInicial.giro_brazo,
@@ -315,27 +239,18 @@ function iniciarAnimacion() {
       giro_pinza: posicionInicial.giro_pinza,
       separacion_pinza: posicionInicial.separacion_pinza
     }, 2500)
-    .easing(TWEEN.Easing.Cubic.InOut)
-    .onUpdate(() => {
-      actualizarRobot(inicio);
-    })
+    .easing(TWEEN.Easing.Sinusoidal.InOut)
+    .onUpdate(() => actualizarRobot(inicio))
     .onComplete(() => {
       animacionActiva = false;
-    });
+  });
 
-  // Encadenar toda la secuencia
   tween1.chain(tween2);
   tween2.chain(tween3);
   tween3.chain(tween4);
   tween4.chain(tween5);
-  tween5.chain(tween6);
-  tween6.chain(tween7);
-  tween7.chain(tween8);
-  tween8.chain(tween9);
-  tween9.chain(tween10);
-  tween10.chain(tween11);
 
-  // Iniciar la secuencia
+
   tween1.start();
 }
 
