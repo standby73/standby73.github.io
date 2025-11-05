@@ -231,6 +231,14 @@ function init()
 function onCollision(event){ 
     let otherBody = event.body;
     if (otherBody.obstacle && playGame) {
+        if (player.mesh.fbx) {
+            player.mesh.fbx.traverse(child => {
+                if (child.isMesh) {
+                    child.material.userData.original_color = child.material.color.clone();
+                    child.material.color.set(0xff0000);
+                }
+            });
+        }
         changeAnimation(4);
         setTimeout(() => {
             hud.showGameOver(() => {
@@ -238,7 +246,7 @@ function onCollision(event){
                 playGame = false;
                 init();
             });
-        }, 2000);
+        }, 3000);
         playGame = false;
         restart = true;
     }
@@ -375,6 +383,13 @@ function update()
         player.mesh.fbx.position.y += player.height/10 ;
         player.mesh.body.velocity.set(0, player.mesh.body.velocity.y, 0);
         player.mesh.body.angularVelocity.set(0, player.mesh.body.angularVelocity.y, 0);
+        setTimeout(() => {
+            player.mesh.fbx.traverse(child => {
+                if (child.isMesh && child.material && child.material.userData.original_color) {
+                    child.material.color.copy(child.material.userData.original_color);
+                }
+            });
+        }, 1000);
     }
 
     if (!camaraFollow) {
